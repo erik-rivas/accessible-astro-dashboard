@@ -3,6 +3,16 @@
 AWS TALK
 ----------------------------------
 
+
+## 🚀 Recipy instructions
+
+```bash
+npm create astro@latest
+npm install react react-dom
+npx astro add react tailwind mdx
+```
+
+
 ## TODO:
 
 1. Clone the repo
