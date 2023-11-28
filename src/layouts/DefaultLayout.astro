@@ -44,33 +44,39 @@ let subtitle = 'Accessible Astro Dashboard'
         <li class="menu-item">
           <a href="/">
             <Icon pack="majesticons" name="home-line" /> 
-            <span class="sr-only">Dashboard</span>
+            <span class="sr-only">Index</span>
           </a>
         </li>
         <li class="menu-item">
-          <a href="/products/">
-            <Icon pack="majesticons" name="shopping-cart-line" /> 
-            <span class="sr-only">Products</span>
+          <a href="/pokemon/">
+            <Icon pack="simple-icons" name="pokemon" /> 
+            <span class="sr-only">Pokemon</span>
           </a>
         </li>
         <li class="menu-item">
-          <a href="/users/">
-            <Icon pack="majesticons" name="users-line" /> 
-            <span class="sr-only">Users</span>
+          <a href="/pokemon/history/">
+            <Icon pack="clarity" name="history-line" /> 
+            <span class="sr-only">History</span>
           </a>
         </li>
         <li class="menu-item">
-          <a href="/messages/">
-            <Icon pack="majesticons" name="messages-line" /> 
-            <span class="sr-only">Messages</span>
+          <a href="/pokemon/characters/">
+            <Icon pack="gg" name="pokemon" /> 
+            <span class="sr-only">Pokemon Characters</span>
+          </a>
+        </li>
+        <li class="menu-item">
+          <a href="/community/">
+            <Icon pack="fluent" name="people-community-28-regular" /> 
+            <span class="sr-only">Community</span>
           </a>
         </li>
         <li class="menu-item">
           <a href="/media/">
             <Icon pack="majesticons" name="image-line" /> 
             <span class="sr-only">Media</span>
-          </a>
-        </li>
+            </a>
+          </li>
       </Navigation>    
       <main id="main-content">
         <slot />

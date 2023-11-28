@@ -1,0 +1,38 @@
+---
+import DefaultLayout from '../../../layouts/DefaultLayout.astro'
+import { Icon } from 'astro-icon'
+import { Notification } from 'accessible-astro-components'
+import { Image } from "astro:assets"
+import logo from "../assets/img/logo.svg"
+
+
+// Define any data or functions here
+const title = "Pikachu";
+const briefDescription = "Pikachu, a Electric-type Pokémon, is known for its cute and cuddly appearance combined with its powerful electric abilities. Often seen as the face of Pokémon, Pikachu is a popular choice among trainers.";
+const longDescription = "Pikachu, the Electric Mouse Pokémon, is one of the most recognizable and beloved creatures in the Pokémon world. Famous for its bright yellow fur, long ears with black tips, and a tail shaped like a lightning bolt, Pikachu has become a cultural icon. It stores electricity in its cheeks, releasing it in powerful shocks. Loyal, brave, and friendly, Pikachu has a strong bond with its trainer and is capable of defeating even the strongest opponents with its electrifying moves.";
+---
+
+<DefaultLayout title="Media">
+    <section>
+        <h1>{title}</h1>
+    </section>
+    
+    <section>
+        <Notification type="info">
+            <Icon pack="ion" name="information-circle-outline" />
+            <p>
+                {briefDescription}
+            </p>
+        </Notification>
+    </section>
+
+    <section>
+      <Image src="/pokemon/pikachu.png" alt="Pikachu" />
+      <Image src={logo} alt="Your Logo" width="47" height="37" />
+
+    </section>
+    <section>
+      <p>{longDescription}</p>
+    </section>
+</DefaultLayout>
+

@@ -1,0 +1,16 @@
+---
+import DefaultLayout from '../../../layouts/DefaultLayout.astro'
+
+export function getStaticPaths() {
+  return [
+    // {params: {pokemon: 'pikachu'}},
+    {params: {pokemon: 'charmander'}},
+    {params: {pokemon: 'squirtle'}},  ];
+}
+
+const { pokemon } = Astro.params;
+---
+
+<DefaultLayout title="Media">
+    <div>Good pokemon!, {pokemon}!</div>
+</DefaultLayout>
