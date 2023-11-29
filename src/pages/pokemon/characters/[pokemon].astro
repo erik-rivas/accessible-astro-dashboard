@@ -1,5 +1,37 @@
 ---
-import DefaultLayout from '../../../layouts/DefaultLayout.astro'
+import DefaultLayout from '~/layouts/DefaultLayout.astro';
+// import BlogList from '~/components/blog/List.astro';
+// import Headline from '~/components/blog/Headline.astro';
+// // import PostTags from "~/components/blog/Tags.astro";
+
+// import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
+
+// export const prerender = true;
+
+// export async function getStaticPaths ({ paginate }) {
+//   return await getStaticPathsBlogList({ paginate });
+// }
+
+// const { page } = Astro.props;
+// const currentPage = page.currentPage ?? 1;
+
+// // const allCategories = await findCategories();
+// // const allTags = await findTags();
+
+// const metadata = {
+//   title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+//   robots: {
+//     index: blogListRobots?.index && currentPage === 1,
+//     follow: blogListRobots?.follow,
+//   },
+//   openGraph: {
+//     type: 'blog',
+//   },
+// };
+
+///////////////////////
+
+// import DefaultLayout from '../../../'
 
 export function getStaticPaths() {
   return [
@@ -14,3 +46,18 @@ const { pokemon } = Astro.params;
 <DefaultLayout title="Media">
     <div>Good pokemon!, {pokemon}!</div>
 </DefaultLayout>
+
+
+---
+---
+
+<!-- <Layout metadata={metadata}>
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <Headline
+      subtitle="A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"
+    >
+      The Blog
+    </Headline>
+    <BlogList posts={page.data} />
+  </section>
+</Layout> -->

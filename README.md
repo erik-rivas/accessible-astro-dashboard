@@ -9,7 +9,8 @@ AWS TALK
 ```bash
 npm create astro@latest
 npm install react react-dom
-npx astro add react tailwind mdx
+npx astro add react tailwind mdx 
+npm install @unpic/astro limax reading-time
 ```
 
 

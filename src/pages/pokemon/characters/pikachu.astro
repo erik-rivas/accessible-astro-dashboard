@@ -3,8 +3,14 @@ import DefaultLayout from '../../../layouts/DefaultLayout.astro'
 import { Icon } from 'astro-icon'
 import { Notification } from 'accessible-astro-components'
 import { Image } from "astro:assets"
-import logo from "../assets/img/logo.svg"
+import logo from "../../../assets/img/logo.svg"
 
+const pokemon = {
+  name: "Pikachu",
+  image: "/pokemon/pikachu.png",
+  type: "Electric",
+  abilities: ["Static", "Lightning Rod"]
+}
 
 // Define any data or functions here
 const title = "Pikachu";
@@ -18,6 +24,10 @@ const longDescription = "Pikachu, the Electric Mouse Pokémon, is one of the mos
     </section>
     
     <section>
+      <Image src="/pokemon/pikachu.png" width="512" height="512" alt="Pikachu" />
+      <!-- <Image src={logo} alt="Your Logo" width="47" height="37" /> -->
+    </section>
+    <section>
         <Notification type="info">
             <Icon pack="ion" name="information-circle-outline" />
             <p>
@@ -25,14 +35,25 @@ const longDescription = "Pikachu, the Electric Mouse Pokémon, is one of the mos
             </p>
         </Notification>
     </section>
-
-    <section>
-      <Image src="/pokemon/pikachu.png" alt="Pikachu" />
-      <Image src={logo} alt="Your Logo" width="47" height="37" />
-
-    </section>
     <section>
       <p>{longDescription}</p>
     </section>
+
+    <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-gray-800">
+        <img class="w-full" src={pokemon.image} alt={pokemon.name} />
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2 text-gray-800 dark:text-white">{pokemon.name}</div>
+          <p class="text-gray-700 dark:text-gray-400 text-base">
+            Type: {pokemon.type}
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          {pokemon.abilities.map((ability, index) => (
+            <span key={index} className="inline-block bg-gray-200 dark:bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-200 mr-2 mb-2">
+              {ability}
+            </span>
+          ))}
+        </div>
+      </div>    
 </DefaultLayout>
 
